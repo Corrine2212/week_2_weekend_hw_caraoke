@@ -20,5 +20,10 @@ class Room:
     def check_out_guests(self, guest_to_remove):
         self.guest_counter.remove(guest_to_remove)
        
-        
+    def check_room_limit(self, guest_counter):  
+            if self.guest_counter > 10:
+                return "We're at capacity!"
+            elif self.guest_counter < 10:
+                return "There's room for more!"
+
     

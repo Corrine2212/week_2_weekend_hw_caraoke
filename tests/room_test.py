@@ -7,8 +7,8 @@ class TestRoom(unittest.TestCase):
     def setUp(self):
         self.room = Room("Room 1", 10)
         self.song_1 = Song("Unbreak My Heart", "Toni Braxton")
-        self.guest_1 = Guest("Corrine Sing", "Unbreak My Heart")
-        self.guest_2 = Guest("Theo Sing", "Boss Bitch")
+        self.guest_1 = Guest("Corrine Sing", "Unbreak My Heart", 35)
+        self.guest_2 = Guest("Theo Sing", "Boss Bitch", 20)
         
     def test_room_has_name(self):
         expected_value = "Room 1"
@@ -32,4 +32,11 @@ class TestRoom(unittest.TestCase):
         self.room.check_in_guests(self.guest_1)
         self.room.check_out_guests(self.guest_1)
         self.assertEqual(0, self.room.guest_count())
+
+    # def test_if_room_has_space(self):
+    #     self.room.check_in_guests(self.guest_1)
+    #     self.room.check_in_guests(self.guest_2)
+    #     self.room.check_room_limit(self)
+    #     self.assertEqual("There's room for more!", self.room.guest_counter)
+
 
