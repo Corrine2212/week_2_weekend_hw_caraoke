@@ -5,7 +5,7 @@ from classes.room import Room
 class TestGuest(unittest.TestCase):
     def setUp(self) -> None:
         self.guest = Guest("Corrine Sing", "Unbreak My Heart", 35)
-        self.room1 = Room("Room 1", 10)
+        self.room1 = Room("Room 1", 10, 15)
 
     def test_guest_has_name(self):
         expected_result = "Corrine Sing"
